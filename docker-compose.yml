@@ -25,7 +25,7 @@ php:
     APP_FALLBACK_LOCALE: en
     DB_CONNECTION: mysql
     DB_HOST: mysql
-    DB_DATABASE: billings
+    DB_DATABASE: apis
     DB_USERNAME: root
     DB_PASSWORD: pass
     MEMCACHED_HOST: cache
@@ -33,14 +33,14 @@ php:
 
 mysql:
   image: mysql:5.7
-  container_name: billings
+  container_name: apis
   volumes:
     - ./images/mysql/data/:/var/lib/mysql
   ports:
     - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: pass
-    MYSQL_DATABASE: billings
+    MYSQL_DATABASE: apis
     MYSQL_USER: root
     MYSQL_PASSWORD: pass
 
