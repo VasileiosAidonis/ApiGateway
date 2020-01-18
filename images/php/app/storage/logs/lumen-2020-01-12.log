@@ -1,0 +1,818 @@
+[2020-01-12 08:57:25] local.ERROR: GuzzleHttp\Exception\ServerException: Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex,nofollow" />
+        <style>
+             (truncated...)
+ in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:113
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(65): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Promise\Promise->wait()
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/videos1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\VideoService.php(28): App\Services\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\VideoController.php(37): App\Services\VideoService->viewsVideo('1')
+#13 [internal function]: App\Http\Controllers\VideoController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\VideoController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main} {"exception":"[object] (GuzzleHttp\\Exception\\ServerException(code: 500): Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=\"robots\" content=\"noindex,nofollow\" />
+        <style>
+             (truncated...)
+ at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(65): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(203): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(156): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(47): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(246): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(223): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(267): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(225): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/videos1/1', Array)
+#11 C:\\MyFlix\\ApiGateway\\app\\Services\\VideoService.php(28): App\\Services\\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\VideoController.php(37): App\\Services\\VideoService->viewsVideo('1')
+#13 [internal function]: App\\Http\\Controllers\\VideoController->views('1')
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\VideoController), 'views', Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
+[2020-01-12 09:05:30] local.ERROR: GuzzleHttp\Exception\ServerException: Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex,nofollow" />
+        <style>
+             (truncated...)
+ in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:113
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(65): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Promise\Promise->wait()
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/videos1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\VideoService.php(28): App\Services\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\VideoController.php(37): App\Services\VideoService->viewsVideo('1')
+#13 [internal function]: App\Http\Controllers\VideoController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\VideoController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main} {"exception":"[object] (GuzzleHttp\\Exception\\ServerException(code: 500): Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=\"robots\" content=\"noindex,nofollow\" />
+        <style>
+             (truncated...)
+ at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(65): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(203): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(156): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(47): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(246): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(223): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(267): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(225): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/videos1/1', Array)
+#11 C:\\MyFlix\\ApiGateway\\app\\Services\\VideoService.php(28): App\\Services\\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\VideoController.php(37): App\\Services\\VideoService->viewsVideo('1')
+#13 [internal function]: App\\Http\\Controllers\\VideoController->views('1')
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\VideoController), 'views', Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
+[2020-01-12 09:21:36] local.ERROR: GuzzleHttp\Exception\ServerException: Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex,nofollow" />
+        <style>
+             (truncated...)
+ in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:113
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(65): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Promise\Promise->wait()
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/videos1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\VideoService.php(28): App\Services\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\VideoController.php(37): App\Services\VideoService->viewsVideo('1')
+#13 [internal function]: App\Http\Controllers\VideoController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\VideoController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main} {"exception":"[object] (GuzzleHttp\\Exception\\ServerException(code: 500): Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=\"robots\" content=\"noindex,nofollow\" />
+        <style>
+             (truncated...)
+ at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(65): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(203): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(156): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(47): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(246): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(223): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(267): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(225): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/videos1/1', Array)
+#11 C:\\MyFlix\\ApiGateway\\app\\Services\\VideoService.php(28): App\\Services\\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\VideoController.php(37): App\\Services\\VideoService->viewsVideo('1')
+#13 [internal function]: App\\Http\\Controllers\\VideoController->views('1')
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\VideoController), 'views', Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
+[2020-01-12 09:29:50] local.ERROR: GuzzleHttp\Exception\ServerException: Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex,nofollow" />
+        <style>
+             (truncated...)
+ in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:113
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(65): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Promise\Promise->wait()
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/videos1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\VideoService.php(28): App\Services\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\VideoController.php(37): App\Services\VideoService->viewsVideo('1')
+#13 [internal function]: App\Http\Controllers\VideoController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\VideoController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main} {"exception":"[object] (GuzzleHttp\\Exception\\ServerException(code: 500): Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=\"robots\" content=\"noindex,nofollow\" />
+        <style>
+             (truncated...)
+ at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(65): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(203): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(156): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(47): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(246): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(223): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(267): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(225): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/videos1/1', Array)
+#11 C:\\MyFlix\\ApiGateway\\app\\Services\\VideoService.php(28): App\\Services\\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\VideoController.php(37): App\\Services\\VideoService->viewsVideo('1')
+#13 [internal function]: App\\Http\\Controllers\\VideoController->views('1')
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\VideoController), 'views', Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
+[2020-01-12 09:32:43] local.ERROR: GuzzleHttp\Exception\ServerException: Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex,nofollow" />
+        <style>
+             (truncated...)
+ in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:113
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(65): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Promise\Promise->wait()
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/videos1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\VideoService.php(28): App\Services\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\VideoController.php(37): App\Services\VideoService->viewsVideo('1')
+#13 [internal function]: App\Http\Controllers\VideoController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\VideoController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main} {"exception":"[object] (GuzzleHttp\\Exception\\ServerException(code: 500): Server error: `GET http://localhost:8003/videos1/1` resulted in a `500 Internal Server Error` response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=\"robots\" content=\"noindex,nofollow\" />
+        <style>
+             (truncated...)
+ at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(65): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(203): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(156): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(47): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(246): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(223): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(267): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(225): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/videos1/1', Array)
+#11 C:\\MyFlix\\ApiGateway\\app\\Services\\VideoService.php(28): App\\Services\\VideoService->performRequest('GET', '/videos1/1')
+#12 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\VideoController.php(37): App\\Services\\VideoService->viewsVideo('1')
+#13 [internal function]: App\\Http\\Controllers\\VideoController->views('1')
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\VideoController), 'views', Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
+[2020-01-12 11:06:25] local.ERROR: RuntimeException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php:252
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(334): GuzzleHttp\Handler\StreamHandler->createResource(Object(Closure))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(51): GuzzleHttp\Handler\StreamHandler->createStream(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#13 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main}
+
+Next GuzzleHttp\Exception\RequestException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:52
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(67): GuzzleHttp\Exception\RequestException::wrapException(Object(GuzzleHttp\Psr7\Request), Object(RuntimeException))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#9 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#13 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#17 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#27 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#28 {main} {"exception":"[object] (GuzzleHttp\\Exception\\RequestException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:52, RuntimeException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php:252)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php(67): GuzzleHttp\\Exception\\RequestException::wrapException(Object(GuzzleHttp\\Psr7\\Request), Object(RuntimeException))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php(37): GuzzleHttp\\Handler\\StreamHandler->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(29): GuzzleHttp\\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php(70): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(59): GuzzleHttp\\RedirectMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\HandlerStack.php(71): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(361): GuzzleHttp\\HandlerStack->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(163): GuzzleHttp\\Client->transfer(Object(GuzzleHttp\\Psr7\\Request), Array)
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Client->requestAsync('GET', Object(GuzzleHttp\\Psr7\\Uri), Array)
+#9 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\\MyFlix\\ApiGateway\\app\\Services\\CatalogueService.php(28): App\\Services\\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\CatalogueController.php(37): App\\Services\\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\\Http\\Controllers\\CatalogueController->views('1')
+#13 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#17 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\CatalogueController), 'views', Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#27 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#28 {main}
+"} 
+[2020-01-12 11:06:29] local.ERROR: RuntimeException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php:252
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(334): GuzzleHttp\Handler\StreamHandler->createResource(Object(Closure))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(51): GuzzleHttp\Handler\StreamHandler->createStream(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#13 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main}
+
+Next GuzzleHttp\Exception\RequestException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:52
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(67): GuzzleHttp\Exception\RequestException::wrapException(Object(GuzzleHttp\Psr7\Request), Object(RuntimeException))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#9 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#13 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#17 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#27 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#28 {main} {"exception":"[object] (GuzzleHttp\\Exception\\RequestException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:52, RuntimeException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php:252)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php(67): GuzzleHttp\\Exception\\RequestException::wrapException(Object(GuzzleHttp\\Psr7\\Request), Object(RuntimeException))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php(37): GuzzleHttp\\Handler\\StreamHandler->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(29): GuzzleHttp\\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php(70): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(59): GuzzleHttp\\RedirectMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\HandlerStack.php(71): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(361): GuzzleHttp\\HandlerStack->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(163): GuzzleHttp\\Client->transfer(Object(GuzzleHttp\\Psr7\\Request), Array)
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Client->requestAsync('GET', Object(GuzzleHttp\\Psr7\\Uri), Array)
+#9 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\\MyFlix\\ApiGateway\\app\\Services\\CatalogueService.php(28): App\\Services\\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\CatalogueController.php(37): App\\Services\\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\\Http\\Controllers\\CatalogueController->views('1')
+#13 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#17 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\CatalogueController), 'views', Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#27 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#28 {main}
+"} 
+[2020-01-12 11:06:36] local.ERROR: RuntimeException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php:252
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(334): GuzzleHttp\Handler\StreamHandler->createResource(Object(Closure))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(51): GuzzleHttp\Handler\StreamHandler->createStream(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#13 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main}
+
+Next GuzzleHttp\Exception\RequestException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:52
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(67): GuzzleHttp\Exception\RequestException::wrapException(Object(GuzzleHttp\Psr7\Request), Object(RuntimeException))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#9 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#13 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#17 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#27 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#28 {main} {"exception":"[object] (GuzzleHttp\\Exception\\RequestException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:52, RuntimeException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php:252)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php(67): GuzzleHttp\\Exception\\RequestException::wrapException(Object(GuzzleHttp\\Psr7\\Request), Object(RuntimeException))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php(37): GuzzleHttp\\Handler\\StreamHandler->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(29): GuzzleHttp\\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php(70): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(59): GuzzleHttp\\RedirectMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\HandlerStack.php(71): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(361): GuzzleHttp\\HandlerStack->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(163): GuzzleHttp\\Client->transfer(Object(GuzzleHttp\\Psr7\\Request), Array)
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Client->requestAsync('GET', Object(GuzzleHttp\\Psr7\\Uri), Array)
+#9 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\\MyFlix\\ApiGateway\\app\\Services\\CatalogueService.php(28): App\\Services\\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\CatalogueController.php(37): App\\Services\\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\\Http\\Controllers\\CatalogueController->views('1')
+#13 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#17 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\CatalogueController), 'views', Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#27 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#28 {main}
+"} 
+[2020-01-12 11:06:40] local.ERROR: RuntimeException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php:252
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(334): GuzzleHttp\Handler\StreamHandler->createResource(Object(Closure))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(51): GuzzleHttp\Handler\StreamHandler->createStream(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#9 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#10 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#11 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#12 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#13 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#28 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#29 {main}
+
+Next GuzzleHttp\Exception\RequestException: Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php
+[line] 323 in C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:52
+Stack trace:
+#0 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Handler\StreamHandler.php(67): GuzzleHttp\Exception\RequestException::wrapException(Object(GuzzleHttp\Psr7\Request), Object(RuntimeException))
+#1 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(37): GuzzleHttp\Handler\StreamHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(29): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#3 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(70): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#4 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#5 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\HandlerStack.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#6 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(361): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#7 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(163): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#8 C:\MyFlix\ApiGateway\vendor\guzzlehttp\guzzle\src\Client.php(183): GuzzleHttp\Client->requestAsync('GET', Object(GuzzleHttp\Psr7\Uri), Array)
+#9 C:\MyFlix\ApiGateway\app\Traits\ConsumesExternalService.php(24): GuzzleHttp\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\MyFlix\ApiGateway\app\Services\CatalogueService.php(28): App\Services\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\MyFlix\ApiGateway\app\Http\Controllers\CatalogueController.php(37): App\Services\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\Http\Controllers\CatalogueController->views('1')
+#13 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#15 C:\MyFlix\ApiGateway\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#16 C:\MyFlix\ApiGateway\vendor\illuminate\container\Container.php(572): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#17 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(378): Illuminate\Container\Container->call(Array, Array)
+#18 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(344): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#19 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(318): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\CatalogueController), 'views', Array)
+#20 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(280): Laravel\Lumen\Application->callControllerAction(Array)
+#21 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(265): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(235): Laravel\Lumen\Application->handleFoundRoute(Array)
+#23 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(169): Laravel\Lumen\Application->handleDispatcherResponse(Array)
+#24 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(418): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#25 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\MyFlix\ApiGateway\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#27 C:\MyFlix\ApiGateway\public\index.php(28): Laravel\Lumen\Application->run()
+#28 {main} {"exception":"[object] (GuzzleHttp\\Exception\\RequestException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:52, RuntimeException(code: 0): Error creating resource: [message] fopen(http://localhost:8002/catalogues1/1): failed to open stream: No connection could be made because the target machine actively refused it.
+
+[file] C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php
+[line] 323 at C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php:252)
+[stacktrace]
+#0 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\StreamHandler.php(67): GuzzleHttp\\Exception\\RequestException::wrapException(Object(GuzzleHttp\\Psr7\\Request), Object(RuntimeException))
+#1 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\PrepareBodyMiddleware.php(37): GuzzleHttp\\Handler\\StreamHandler->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#2 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(29): GuzzleHttp\\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#3 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\RedirectMiddleware.php(70): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#4 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(59): GuzzleHttp\\RedirectMiddleware->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#5 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\HandlerStack.php(71): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Request), Array)
+#6 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(361): GuzzleHttp\\HandlerStack->__invoke(Object(GuzzleHttp\\Psr7\\Request), Array)
+#7 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(163): GuzzleHttp\\Client->transfer(Object(GuzzleHttp\\Psr7\\Request), Array)
+#8 C:\\MyFlix\\ApiGateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(183): GuzzleHttp\\Client->requestAsync('GET', Object(GuzzleHttp\\Psr7\\Uri), Array)
+#9 C:\\MyFlix\\ApiGateway\\app\\Traits\\ConsumesExternalService.php(24): GuzzleHttp\\Client->request('GET', '/catalogues1/1', Array)
+#10 C:\\MyFlix\\ApiGateway\\app\\Services\\CatalogueService.php(28): App\\Services\\CatalogueService->performRequest('GET', '/catalogues1/1')
+#11 C:\\MyFlix\\ApiGateway\\app\\Http\\Controllers\\CatalogueController.php(37): App\\Services\\CatalogueService->viewsCatalogue('1')
+#12 [internal function]: App\\Http\\Controllers\\CatalogueController->views('1')
+#13 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#16 C:\\MyFlix\\ApiGateway\\vendor\\illuminate\\container\\Container.php(572): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#17 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(378): Illuminate\\Container\\Container->call(Array, Array)
+#18 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(344): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#19 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(318): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\CatalogueController), 'views', Array)
+#20 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(280): Laravel\\Lumen\\Application->callControllerAction(Array)
+#21 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(265): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(235): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#23 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#24 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(418): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#25 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\\MyFlix\\ApiGateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#27 C:\\MyFlix\\ApiGateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#28 {main}
+"} 
