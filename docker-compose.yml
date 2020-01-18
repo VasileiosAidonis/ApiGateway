@@ -1,0 +1,48 @@
+nginx:
+  build: images/nginx
+  command: nginx -g "daemon off;"
+  links:
+    - php
+  ports:
+    - "80:80"
+
+php:
+  build: images/php
+  volumes:
+    - ./images/php:/var/www/html
+  working_dir: /var/www/html/app/public
+  command: php-fpm
+  links:
+    - mysql
+    - cache
+  ports:
+    - "9000:9000"
+  environment:
+    APP_ENV: local
+    APP_DEBUG: 'true'
+    APP_KEY: 1Bj7POHGkoKmxppwkyqSVTUYEzzTlDjT
+    APP_LOCALE: en
+    APP_FALLBACK_LOCALE: en
+    DB_CONNECTION: mysql
+    DB_HOST: mysql
+    DB_DATABASE: billings
+    DB_USERNAME: root
+    DB_PASSWORD: pass
+    MEMCACHED_HOST: cache
+    CACHE_DRIVER: memcached
+
+mysql:
+  image: mysql:5.7
+  container_name: billings
+  volumes:
+    - ./images/mysql/data/:/var/lib/mysql
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: pass
+    MYSQL_DATABASE: billings
+    MYSQL_USER: root
+    MYSQL_PASSWORD: pass
+
+cache:
+  image: memcached
