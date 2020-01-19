@@ -66,7 +66,7 @@ class LoginController extends Controller
                           createLogin($request->all(),
                           Response::HTTP_CREATED
                           ));
-      dd($check);             
+            
        if ($check->status() == 200)
        {
          // redirects if valid to billing page
