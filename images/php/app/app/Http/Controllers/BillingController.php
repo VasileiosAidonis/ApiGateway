@@ -45,9 +45,18 @@ class BillingController extends Controller
     * Fetch the billing view
     * @return Illuminate\Http\Response
     */
-    public function views()
+    public function views(Request $request)
     {
-        return $this->billingService->viewsBilling();
+        $session = $request->session();
+        $auth = $session->get('auth');
+
+        if($auth == 'yes'){
+
+            return $this->billingService->viewsBilling();
+        } else {
+
+            return redirect()->route('logins');
+        }
     }
 
     /**

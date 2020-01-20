@@ -32,9 +32,18 @@ class CatalogueController extends Controller
     * Fetch the catalogue view
     * @return Illuminate\Http\Response
     */
-    public function views($catalogue)
+    public function views(Request $request, $catalogue)
     {
-        return $this->catalogueService->viewsCatalogue($catalogue);
+        $session = $request->session();
+        $auth = $session->get('auth');
+
+        if($auth == 'yes'){
+
+           return $this->catalogueService->viewsCatalogue($catalogue);
+        } else {
+
+           return redirect()->route('logins');
+        }
     }
 
     /**

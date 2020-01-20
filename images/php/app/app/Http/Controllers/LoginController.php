@@ -41,8 +41,11 @@ class LoginController extends Controller
     * Fetch the login view
     * @return Illuminate\Http\Response
     */
-    public function views()
+    public function views(Request $request)
     {
+        $session = $request->session();
+        $session->put('auth','no');
+
         return $this->loginService->viewsLogin();
     }
 
@@ -66,11 +69,24 @@ class LoginController extends Controller
                           createLogin($request->all(),
                           Response::HTTP_CREATED
                           ));
-            
-       if ($check->status() == 200)
+
+      $session = $request->session();
+      $session->put('auth','no');
+      //$auth = $session->get('auth');
+
+      //dd($check->content()[0]);
+      $error = $this->errorResponse('Invalid Username or Password',
+                  Response::HTTP_UNPROCESSABLE_ENTITY);
+
+       if ($check->status() == 200 && $check->content()[0] != "<")
        {
+         $session = $request->session();
+         $session->put('auth','yes');
          // redirects if valid to billing page
           return redirect()->route('billings');
+       } else {
+
+          return redirect()->route('logins');
        }
     }
 

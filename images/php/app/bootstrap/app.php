@@ -27,6 +27,8 @@ $app = new Laravel\Lumen\Application(
 
  $app->withEloquent();
 
+ $app->configure('session');
+
 /**
 * Registering config files
 */
@@ -74,9 +76,16 @@ $app->singleton(
 /**
 * Adding Sessions to lumen
 */
-//$app->middleware([
-//    \Illuminate\Session\Middleware\StartSession::class,
-//]);
+$app->bind(Illuminate\Session\SessionManager::class, function ($app) {
+    return $app->make('session');
+});
+
+$app->middleware([
+    'Illuminate\Session\Middleware\StartSession'
+]);
+
+$app->register(Illuminate\Session\SessionServiceProvider::class);
+
 
 // $app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class

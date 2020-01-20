@@ -32,9 +32,18 @@ class VideoController extends Controller
     * Fetch the video view
     * @return Illuminate\Http\Response
     */
-    public function views($video)
+    public function views(Request $request, $video)
     {
-        return $this->videoService->viewsVideo($video);
+        $session = $request->session();
+        $auth = $session->get('auth');
+
+        if($auth == 'yes'){
+
+           return $this->videoService->viewsVideo($video);
+        } else {
+
+           return redirect()->route('logins');
+        }
     }
 
     /**
