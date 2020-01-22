@@ -60,6 +60,24 @@ class BillingController extends Controller
     }
 
     /**
+    * Fetch the billings_exist view
+    * @return Illuminate\Http\Response
+    */
+    public function views_exist(Request $request, $billing)
+    {
+        $session = $request->session();
+        $auth = $session->get('auth');
+
+        if($auth == 'yes'){  
+
+           return $this->billingService->viewsBilling_exist($billing);
+        } else {
+
+           return redirect()->route('logins');
+        }
+    }
+
+    /**
     * BACK END
     * Return the list of billings
     * @return Illuminate\Http\Response

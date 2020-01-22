@@ -23,13 +23,14 @@ php:
     APP_KEY: 1Bj7POHGkoKmxppwkyqSVTUYEzzTlDjT
     APP_LOCALE: en
     APP_FALLBACK_LOCALE: en
+    SESSION_DRIVER: file
     DB_CONNECTION: mysql
     DB_HOST: mysql
     DB_DATABASE: apis
     DB_USERNAME: root
     DB_PASSWORD: pass
     MEMCACHED_HOST: cache
-    CACHE_DRIVER: memcached
+    CACHE_DRIVER: file
 
 mysql:
   image: mysql:5.7

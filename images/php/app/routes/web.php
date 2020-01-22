@@ -74,6 +74,12 @@ $router->get('/registers1', [
 $router->get('/billings1', [
       'as' => 'billings', 'uses' => 'BillingController@views'
 ]);
+/**
+* Routes for billing that already made
+*/
+$router->get('/billings1/{billings_exist}', [
+      'as' => 'billings_exist', 'uses' => 'BillingController@views_exist'
+]);
 $router->get('/catalogues1/{catalogue}', [
       'as' => 'catalogues', 'uses' => 'CatalogueController@views'
 ]);
