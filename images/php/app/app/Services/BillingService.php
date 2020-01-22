@@ -30,6 +30,15 @@ class BillingService
     }
 
     /**
+    * Obtain the billings_exist view from the billing service
+    * @return string
+    */
+    public function viewsBilling_exist($billing)
+    {
+        return $this->performRequest('GET',"/billings1/{$billing}");
+    }
+
+    /**
     * Obtain the full list of billings from the billing service
     * @return string
     */
