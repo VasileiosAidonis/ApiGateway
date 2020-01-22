@@ -120,9 +120,8 @@ class LoginController extends Controller
            $user = $session->get('user_id');
            if($user <= count($user_billing)){
 
-               return redirect()->route('billings_exist',[
-                          'billings_exist' => $user,
-               ]);
+               return redirect()->route('catalogues', ['catalogue' => 1]);
+
            } else{
 
                return redirect()->route('billings');

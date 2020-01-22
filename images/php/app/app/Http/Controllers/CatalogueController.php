@@ -51,8 +51,14 @@ class CatalogueController extends Controller
     * Return the list of catalogues
     * @return Illuminate\Http\Response
     */
-    public function index()
+    public function index(Request $request)
     {
+        $session = $request->session();
+        $user = $session->get('user_id');
+
+        return redirect()->route('billings_exist',[
+                   'billings_exist' => $user,
+        ]);
         return $this->successResponse($this->catalogueService->obtainCatalogues());
     }
 
