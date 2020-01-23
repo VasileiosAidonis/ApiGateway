@@ -68,7 +68,7 @@ class BillingController extends Controller
         $session = $request->session();
         $auth = $session->get('auth');
 
-        if($auth == 'yes'){  
+        if($auth == 'yes'){
 
            return $this->billingService->viewsBilling_exist($billing);
         } else {
@@ -120,6 +120,26 @@ class BillingController extends Controller
       {
            // redirects if valid to billing page
            return redirect()->route('catalogues', ['catalogue' => 1]);
+       }
+    }
+
+    /**
+    * Update an existed billing with POST method
+    * @return Illuminate\Http\Response
+    */
+    public function storeupdate(Request $request, $billing)
+    {
+       $session = $request->session();
+       $billing = $session->get('user_id');
+
+       $check = $this->successResponse($this->billingService->
+                          updateBilling($request->all(),$billing));
+
+      if ($check->status() == 200)
+      {
+           // redirects if valid to billing page
+           return redirect()->route('billings_exist',['billings_exist' => $billing]);
+           //return redirect()->route('catalogues', ['catalogue' => 1]);
        }
     }
 

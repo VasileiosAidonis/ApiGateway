@@ -66,6 +66,15 @@ class BillingService
     }
 
     /**
+    * Update one billing from the billing service
+    * @return string
+    */
+    public function updateBilling($data, $billing)
+    {
+        return $this->performRequest('POST',"/billings/{$billing}", $data);
+    }
+    
+    /**
     * Obtain one billing from the billing service
     * @return string
     */
