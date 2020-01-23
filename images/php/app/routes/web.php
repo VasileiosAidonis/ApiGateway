@@ -36,6 +36,7 @@ $router->delete('/registers/{register}', 'RegisterController@destroy');
 $router->get('/billings', 'BillingController@index');
 // Create the data
 $router->get('/billings/create', 'BillingController@create');
+$router->post('billings/{billing}','BillingController@storeupdate');
 $router->post('/billings', 'BillingController@store');
 $router->get('/billings/{billing}', 'BillingController@show');
 $router->put('/billings/{billing}', 'BillingController@update');
