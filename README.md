@@ -1,5 +1,5 @@
 # ApiGateway
  using Lumen Framework
  
- linking LoginsAPi <a href="https://github.com/VasileiosAidonis/LoginsApi>a </a>
+ linking LoginsAPi(https://github.com/VasileiosAidonis/LoginsApi)
 * [Git Wrapper](https://github.com/cpliakas/git-wrapper)
