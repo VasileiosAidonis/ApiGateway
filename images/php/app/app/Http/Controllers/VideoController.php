@@ -57,6 +57,18 @@ class VideoController extends Controller
     }
 
     /**
+    * Get the username for catalogues
+    * @return Illuminate\Http\Response
+    */
+    public function username(Request $request)
+    {
+      $session = $request->session();
+      $user_username = $session->get('user_username');
+
+      return redirect()->route('catalogues', ['catalogue' => $user_username ]);
+    }
+
+    /**
     * Create one new video
     * @return Illuminate\Http\Response
     */

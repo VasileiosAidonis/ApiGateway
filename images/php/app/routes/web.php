@@ -57,6 +57,8 @@ $router->delete('/catalogues/{catalogue}', 'CatalogueController@destroy');
 * Routes for the videos
 */
 $router->get('/videos','VideoController@index');
+$router->get('/videos/video','VideoController@username');
+
 $router->post('/videos','VideoController@store');
 $router->get('/videos/{video}','VideoController@show');
 $router->put('/videos/{video}','VideoController@update');
