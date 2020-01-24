@@ -114,13 +114,15 @@ class LoginController extends Controller
                if ($user_register[$counter]['username']  == $user_login['username']){
 
                       $session->put('user_id', $user_register[$counter]['id'] );
+                      $session->put('user_username', $user_register[$counter]['username'] );
               }
            }
 
-           $user = $session->get('user_id');
-           if($user <= count($user_billing)){
+           $user_id = $session->get('user_id');
+           $user_username = $session->get('user_username');
+           if($user_id <= count($user_billing)){
 
-               return redirect()->route('catalogues', ['catalogue' => 1]);
+               return redirect()->route('catalogues', ['catalogue' => $user_username ]);
 
            } else{
 

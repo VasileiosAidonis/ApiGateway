@@ -48,7 +48,7 @@ class BillingService
     }
 
     /**
-    * Create one billing from the billing service
+    * Used to pass username to catalogues
     * @return string
     */
     public function createBill($data)
@@ -73,7 +73,7 @@ class BillingService
     {
         return $this->performRequest('POST',"/billings/{$billing}", $data);
     }
-    
+
     /**
     * Obtain one billing from the billing service
     * @return string

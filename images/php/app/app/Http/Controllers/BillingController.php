@@ -82,10 +82,12 @@ class BillingController extends Controller
     * Return the list of billings
     * @return Illuminate\Http\Response
     */
-    public function index()
+    public function index(Request $request)
     {
-        // Takes the global username variable
-        $username = Config::get('constants.USERNAME');
+        $session = $request->session();
+        $user_username = $session->get('user_username');
+
+        return redirect()->route('catalogues', ['catalogue' => $user_username ]);
 
         return $this->successResponse($this->billingService->obtainBillings());
     }
@@ -96,10 +98,10 @@ class BillingController extends Controller
     */
     public function create(Request $request)
     {
-       return $this->successResponse($this->billingService->
-                          createBill($request->all(),
-                          Response::HTTP_CREATED
-                          ));
+      $session = $request->session();
+      $user_username = $session->get('user_username');
+
+      return redirect()->route('catalogues', ['catalogue' => $user_username ]);
     }
 
     /**
@@ -118,8 +120,10 @@ class BillingController extends Controller
                           ));
       if ($check->status() == 200)
       {
+           $session = $request->session();
+           $user_username = $session->get('user_username');
            // redirects if valid to billing page
-           return redirect()->route('catalogues', ['catalogue' => 1]);
+           return redirect()->route('catalogues', ['catalogue' => $user_username ]);
        }
     }
 
