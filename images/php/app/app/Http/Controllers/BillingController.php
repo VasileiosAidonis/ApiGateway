@@ -118,6 +118,7 @@ class BillingController extends Controller
                           createBilling($request->all(),
                           Response::HTTP_CREATED
                           ));
+
       if ($check->status() == 200)
       {
            $session = $request->session();
@@ -139,10 +140,16 @@ class BillingController extends Controller
        $check = $this->successResponse($this->billingService->
                           updateBilling($request->all(),$billing));
 
-      if ($check->status() == 200)
-      {
-           // redirects if valid to billing page
-           return redirect()->route('billings_exist',['billings_exist' => $billing]);
+       $errors = json_decode($check->content(), true);
+       $errors = array_shift($errors);
+       //$billing = [$billing, $errors];
+
+       if ($check->status() == 200)
+       {
+           return redirect()->route('billings_exist',[
+                     'billings_exist' => $billing,
+                     'errors' => $errors
+                   ]);
            //return redirect()->route('catalogues', ['catalogue' => 1]);
        }
     }

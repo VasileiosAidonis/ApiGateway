@@ -59,6 +59,7 @@ class CatalogueController extends Controller
         return redirect()->route('billings_exist',[
                    'billings_exist' => $user,
         ]);
+
         return $this->successResponse($this->catalogueService->obtainCatalogues());
     }
 
@@ -81,6 +82,23 @@ class CatalogueController extends Controller
     public function show($catalogue)
     {
        return $this->successResponse($this->catalogueService->obtainCatalogue($catalogue));
+    }
+
+    /**
+    * Redirect catalogue with new thumbnails
+    * @return Illuminate\Http\Response
+    */
+    public function update_thumb(Request $request, $catalogue, $thumb)
+    {
+        $session = $request->session();
+        $user_username = $session->get('user_username');
+        $user = $session->get('user_id');
+
+        $this->catalogueService->update_thumbCatalogue($request->all(), $user_username, $thumb);
+
+        return redirect()->route('catalogues', [
+                    'catalogue' => $user_username,
+        ]);
     }
 
     /**

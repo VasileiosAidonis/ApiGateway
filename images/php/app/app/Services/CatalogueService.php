@@ -56,6 +56,16 @@ class CatalogueService
     }
 
     /**
+    * Create one catalogue from the catalogue service
+    * @return string
+    */
+    public function update_thumbCatalogue($data, $catalogue, $thumb)
+    {
+        return $this->performRequest('POST',"/catalogues1/{$catalogue}/{$thumb}",
+                                 $data);
+    }
+
+    /**
     * Update one instance of catalogue from the catalogue service
     * @return string
     */

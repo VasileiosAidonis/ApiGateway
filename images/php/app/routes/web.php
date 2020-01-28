@@ -32,10 +32,9 @@ $router->delete('/registers/{register}', 'RegisterController@destroy');
 /**
 * Routes for the billings
 */
-//$router->get('/billings', 'BillingController@index');
 $router->get('/billings', 'BillingController@index');
-// Create the data
 $router->get('/billings/create', 'BillingController@create');
+//Update with POST method
 $router->post('billings/{billing}','BillingController@storeupdate');
 $router->post('/billings', 'BillingController@store');
 $router->get('/billings/{billing}', 'BillingController@show');
@@ -49,6 +48,7 @@ $router->delete('/billings/{billing}', 'BillingController@destroy');
 $router->get('/catalogues', 'CatalogueController@index');
 $router->post('/catalogues', 'CatalogueController@store');
 $router->get('/catalogues/{catalogue}', 'CatalogueController@show');
+
 $router->put('/catalogues/{catalogue}', 'CatalogueController@update');
 $router->patch('/catalogues/{catalogue}', 'CatalogueController@update');
 $router->delete('/catalogues/{catalogue}', 'CatalogueController@destroy');
@@ -85,6 +85,10 @@ $router->get('/billings1/{billings_exist}', [
 ]);
 $router->get('/catalogues1/{catalogue}', [
       'as' => 'catalogues', 'uses' => 'CatalogueController@views'
+]);
+//Thumbnails
+$router->post('/catalogues1/{catalogue}/{thumb}', [
+  'as' => 'catalogues_thumb', 'uses' => 'CatalogueController@update_thumb'
 ]);
 $router->get('/videos1/{video}', 'VideoController@views');
 
