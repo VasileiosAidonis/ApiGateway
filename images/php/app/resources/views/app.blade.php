@@ -27,7 +27,7 @@
       <div style="padding-top:100px;"></div>
       <div class="btn" style="font-size:130%;"><a href="/logins1"><strong> Get Started </strong></a></div><br>
       <div class="pb-1 pt-2" style="font-size:130%;">Or</div>
-      <div class="btn" style="font-size:125%;"><a href="/billings1">Go to <strong>Payment</strong> Microservice</a></div><br>
+      <div class="btn" style="font-size:125%;"><a href="/billings1">Go to <strong>Billing</strong> Microservice</a></div><br>
       <div class="btn" style="font-size:125%;"><a href="/catalogues1/1">Go to <strong>Catalogue</strong> Microservice</a></div><br>
       <div class="btn" style="font-size:125%;"><a href="/videos1/1">Use <strong>Video</strong> Microservice</a></div>
       <div style="padding-bottom:270px;"></div>
