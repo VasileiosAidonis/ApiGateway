@@ -35,7 +35,7 @@
   </div><hr>
 
   <div class="p-3 mb-2 bg-dark text-white text-center"
-       style="border:10px solid red;">University of Dundee
+       style="border:10px solid white;">University of Dundee
   </div>
 
 <script src="dist/app.js"></script>
