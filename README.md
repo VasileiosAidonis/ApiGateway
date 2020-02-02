@@ -6,3 +6,5 @@
 * [BillingsApi](https://github.com/VasileiosAidonis/BillingsApi)
 * [CataloguesApi](https://github.com/VasileiosAidonis/CataloguesApi)
 * [VideosApi](https://github.com/VasileiosAidonis/VideosApi)
+
+![image](MyFlix_Architecture.png)
