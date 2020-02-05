@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MyFlix2</title>
+    <title>MyFlix</title>
     <link rel="stylesheet" href="dist/app.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
                            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -23,7 +23,7 @@
   </nav>
 
   <div class="pt-4 text-center">
-    <div style="border-left:500px solid #9999; border-right:500px solid #9999;">
+    <div style="border-left:500px solid green; border-right:500px solid #9999;">
       <div style="padding-top:100px;"></div>
       <div class="btn" style="font-size:130%;"><a href="/logins1"><strong> Get Started </strong></a></div><br>
       <div class="pb-1 pt-2" style="font-size:130%;">Or</div>
