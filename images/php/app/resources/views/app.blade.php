@@ -23,7 +23,7 @@
   </nav>
 
   <div class="pt-4 text-center">
-    <div style="border-left:500px solid #9999; border-right:500px solid #9999;">
+    <div style="border-left:500px solid green; border-right:500px solid #9999;">
       <div style="padding-top:100px;"></div>
       <div class="btn" style="font-size:130%;"><a href="/logins1"><strong> Get Started </strong></a></div><br>
       <div class="pb-1 pt-2" style="font-size:130%;">Or</div>
